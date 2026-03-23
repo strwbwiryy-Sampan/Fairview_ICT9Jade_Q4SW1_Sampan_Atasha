@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 SW1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;           
+            margin: 0;
+            background: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;  
+            align-items: center;     
+            flex-direction: column;  
+            display: 100%; 
+        }
+
+        .container {
+            background: rgb(255, 255, 255);
+            padding: 20px;
+            height: 260px;
+            width: 300px;
+            outline: 1.5px solid white;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+    <form>
+        <div class="container">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age">
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+
+            <label for="checkbox">
+                <input type="checkbox" id="checkbox" name="checkboxName"> Stay Logged In
+            </label><br><br>
+
+            <button type="button" onclick="checkbox_()">Login</button>
+            <button type="reset">Cancel</button>
+        </div>
+    </form>
+
+    <script>
+        function checkbox_() {
+            let checkbox = document.getElementById("checkbox").checked;
+
+            if (checkbox) {
+                alert("Your Login will stay.");
+            } else {
+                alert("");
+            }
+        }
+    </script>
+</body>
+</html>
